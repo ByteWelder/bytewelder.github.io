@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-05-08T23:12:37+02:00</updated><id>/</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
-</subtitle><entry><title type="html">Borrowing from Kotlin</title><link href="/posts/2017/05/08/borrowing-from-kotlin.html" rel="alternate" type="text/html" title="Borrowing from Kotlin" /><published>2017-05-08T21:57:00+02:00</published><updated>2017-05-08T21:57:00+02:00</updated><id>/posts/2017/05/08/borrowing-from-kotlin</id><content type="html" xml:base="/posts/2017/05/08/borrowing-from-kotlin.html">&lt;p&gt;Not all projects can be easily migrated to Kotlin, but that doesn’t mean we can’t benefit from Kotlin within Java.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-05-08T23:33:45+02:00</updated><id>/</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
+</subtitle><entry><title type="html">Borrowing from Kotlin</title><link href="/posts/2017/05/08/borrowing-from-kotlin.html" rel="alternate" type="text/html" title="Borrowing from Kotlin" /><published>2017-05-08T23:17:00+02:00</published><updated>2017-05-08T23:17:00+02:00</updated><id>/posts/2017/05/08/borrowing-from-kotlin</id><content type="html" xml:base="/posts/2017/05/08/borrowing-from-kotlin.html">&lt;p&gt;Not all projects can be easily migrated to Kotlin, but that doesn’t mean we can’t benefit from Kotlin within other languages.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -18,4 +18,4 @@ you can summon up all implementations that create an instance of &lt;code class=
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2017-05-08-ide.png&quot; alt=&quot;Android Studio / IntelliJ IDEA&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;So why not apply the same idiom to Java?&lt;/p&gt;</content><author><name></name></author><summary type="html">Not all projects can be easily migrated to Kotlin, but that doesn’t mean we can’t benefit from Kotlin within Java.</summary></entry></feed>
+&lt;p&gt;So why not apply the same idiom to Java?&lt;/p&gt;</content><author><name></name></author><summary type="html">Not all projects can be easily migrated to Kotlin, but that doesn’t mean we can’t benefit from Kotlin within other languages.</summary></entry></feed>
