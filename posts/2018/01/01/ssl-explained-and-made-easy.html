@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="Learnings, experiments and projects.">
+  <title>SSL explained and made easy</title>
+  <meta name="description" content="Many developers struggle with thoroughly understanding how HTTPS and SSL work under the hood. This article intends to explain the base concepts in clear lang...">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="/about/">
+  <link rel="canonical" href="/posts/2018/01/01/ssl-explained-and-made-easy.html">
   <link rel="alternate" type="application/rss+xml" title="Byte Welder" href="/feed.xml">
   <link rel="icon" type="image/png" href="assets/images/bytewelder.png">
 
@@ -56,17 +56,50 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">SSL explained and made easy</h1>
+    <p class="post-meta">
+      <time datetime="2017-12-31T23:00:00+01:00" itemprop="datePublished">
+        
+        Jan 1, 2018
+      </time>
+      </p>
   </header>
 
-  <div class="post-content">
-    <p>Byte Welder is an alias used by <a href="http://kenvanhoeylandt.net">Ken Van Hoeylandt</a>. It is used to share learnings, experiments and projects.</p>
+  <div class="post-content" itemprop="articleBody">
+    <p>Many developers struggle with thoroughly understanding how HTTPS and SSL work under the hood.
+This article intends to explain the base concepts in clear language.</p>
+
+<!--more-->
+
+<h1 id="certificates">Certificates</h1>
+
+<p>First, I’ll explain what a certificate really is:</p>
+
+<p>A certificate consists of 2 parts:</p>
+<ul>
+  <li>a public part, that can be shared with the world</li>
+  <li>a private part, that logically, you <em>need</em> to keep private</li>
+</ul>
+
+<p>Each part is used for encryption.</p>
+
+<h1 id="chain-of-trust">Chain of trust</h1>
+
+<p>Now that you have an understanding of certificates […]</p>
+
+<h1 id="chain-of-trust-applied-to-https">Chain of trust applied to HTTPS</h1>
+
+<h1 id="man-in-the-middle">Man in the middle</h1>
+
+<p><a href="http://spork.bytewelder.com">text</a></p>
+
 
   </div>
 
+  
 </article>
 
       </div>
