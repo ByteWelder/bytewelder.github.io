@@ -1,30 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-04-23T22:41:10+02:00</updated><id>/</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
-</subtitle><entry><title type="html">SSL explained and made easy</title><link href="/posts/2018/01/01/ssl-explained-and-made-easy.html" rel="alternate" type="text/html" title="SSL explained and made easy" /><published>2017-12-31T23:00:00+01:00</published><updated>2017-12-31T23:00:00+01:00</updated><id>/posts/2018/01/01/ssl-explained-and-made-easy</id><content type="html" xml:base="/posts/2018/01/01/ssl-explained-and-made-easy.html">&lt;p&gt;Many developers struggle with thoroughly understanding how HTTPS and SSL work under the hood.
-This article intends to explain the base concepts in clear language.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h1 id=&quot;certificates&quot;&gt;Certificates&lt;/h1&gt;
-
-&lt;p&gt;First, I’ll explain what a certificate really is:&lt;/p&gt;
-
-&lt;p&gt;A certificate consists of 2 parts:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;a public part, that can be shared with the world&lt;/li&gt;
-  &lt;li&gt;a private part, that logically, you &lt;em&gt;need&lt;/em&gt; to keep private&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Each part is used for encryption.&lt;/p&gt;
-
-&lt;h1 id=&quot;chain-of-trust&quot;&gt;Chain of trust&lt;/h1&gt;
-
-&lt;p&gt;Now that you have an understanding of certificates […]&lt;/p&gt;
-
-&lt;h1 id=&quot;chain-of-trust-applied-to-https&quot;&gt;Chain of trust applied to HTTPS&lt;/h1&gt;
-
-&lt;h1 id=&quot;man-in-the-middle&quot;&gt;Man in the middle&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://spork.bytewelder.com&quot;&gt;text&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Many developers struggle with thoroughly understanding how HTTPS and SSL work under the hood. This article intends to explain the base concepts in clear language.</summary></entry><entry><title type="html">Introducing Spork 4.0.0</title><link href="/posts/2017/05/14/introducing-spork-4.0.0.html" rel="alternate" type="text/html" title="Introducing Spork 4.0.0" /><published>2017-05-14T17:11:00+02:00</published><updated>2017-05-14T17:11:00+02:00</updated><id>/posts/2017/05/14/introducing-spork%204.0.0</id><content type="html" xml:base="/posts/2017/05/14/introducing-spork-4.0.0.html">&lt;p&gt;I’ve been working hard on &lt;a href=&quot;http://spork.bytewelder.com&quot;&gt;Spork&lt;/a&gt; 4.0.0 since last summer.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-08-05T22:11:31+02:00</updated><id>/</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
+</subtitle><entry><title type="html">Introducing Spork 4.0.0</title><link href="/posts/2017/05/14/introducing-spork-4.0.0.html" rel="alternate" type="text/html" title="Introducing Spork 4.0.0" /><published>2017-05-14T17:11:00+02:00</published><updated>2017-05-14T17:11:00+02:00</updated><id>/posts/2017/05/14/introducing-spork%204.0.0</id><content type="html" xml:base="/posts/2017/05/14/introducing-spork-4.0.0.html">&lt;p&gt;I’ve been working hard on &lt;a href=&quot;http://spork.bytewelder.com&quot;&gt;Spork&lt;/a&gt; 4.0.0 since last summer.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
