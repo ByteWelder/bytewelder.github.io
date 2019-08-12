@@ -1,5 +1,217 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-08-05T22:11:31+02:00</updated><id>/</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
-</subtitle><entry><title type="html">Introducing Spork 4.0.0</title><link href="/posts/2017/05/14/introducing-spork-4.0.0.html" rel="alternate" type="text/html" title="Introducing Spork 4.0.0" /><published>2017-05-14T17:11:00+02:00</published><updated>2017-05-14T17:11:00+02:00</updated><id>/posts/2017/05/14/introducing-spork%204.0.0</id><content type="html" xml:base="/posts/2017/05/14/introducing-spork-4.0.0.html">&lt;p&gt;I’ve been working hard on &lt;a href=&quot;http://spork.bytewelder.com&quot;&gt;Spork&lt;/a&gt; 4.0.0 since last summer.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-13T01:22:29+02:00</updated><id>/feed.xml</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
+</subtitle><entry><title type="html">Installing Mint Linux on Surface Go</title><link href="/posts/2019/08/13/surface-go-mint-linux.html" rel="alternate" type="text/html" title="Installing Mint Linux on Surface Go" /><published>2019-08-13T00:28:00+02:00</published><updated>2019-08-13T00:28:00+02:00</updated><id>/posts/2019/08/13/surface-go-mint-linux</id><content type="html" xml:base="/posts/2019/08/13/surface-go-mint-linux.html">&lt;p&gt;This is a step-by-step guide describing the steps I took to install Mint 19.2 on a Surface Go device as the sole OS.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;After a botched Mint installation, I succeeded in my second attempt a day later.
+It was then that I realized the need to document the process, in case I ever needed to do this dance again.&lt;/p&gt;
+
+&lt;p&gt;This document contains my notes, that I rewrote into this post.&lt;/p&gt;
+
+&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;
+
+&lt;p&gt;I have done my best to put all the details in here, but there is still a chance that some info is missing or incomplete.
+If you’re stuck, feel free to &lt;a href=&quot;https://kenvanhoeylandt.net&quot;&gt;contact me&lt;/a&gt; and I’ll see what I can do for you.
+However, there are no garantees and I take no responsibility if something goes wrong.
+If you follow this guide, you follow it at your own risk.&lt;/p&gt;
+
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;p&gt;If you succeed with the installation in one go, you only need a &lt;code class=&quot;highlighter-rouge&quot;&gt;2 GB&lt;/code&gt; USB storage device.&lt;/p&gt;
+
+&lt;p&gt;If you have a USB-A connector for your storage device, you’ll also need an adapter or a hub.&lt;/p&gt;
+
+&lt;p&gt;You’ll need some basic Bash/Terminal experience to complete this guide.&lt;/p&gt;
+
+&lt;p&gt;If something fails, you will likely need to reinstall Windows 10. To do that, you’ll need an &lt;code class=&quot;highlighter-rouge&quot;&gt;16 GB&lt;/code&gt; USB storage device.
+Scroll down for information about the recovery process.&lt;/p&gt;
+
+&lt;h2 id=&quot;lets-do-this&quot;&gt;Let’s do this!&lt;/h2&gt;
+
+&lt;h3 id=&quot;preparing-the-usb-drive&quot;&gt;Preparing the USB drive&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Download the &lt;a href=&quot;https://linuxmint.com&quot;&gt;64 bit version&lt;/a&gt; of Mint Linux. Version &lt;code class=&quot;highlighter-rouge&quot;&gt;19.2&lt;/code&gt; is what this guide is based on.&lt;/li&gt;
+  &lt;li&gt;Download &lt;a href=&quot;https://rufus.ie&quot;&gt;Rufus&lt;/a&gt; to prepare the USB drive. (alternatively, you can use &lt;a href=&quot;https://unetbootin.github.io&quot;&gt;UNetbootin&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Run Rufus and leave all the defaults, but double-check these settings:
+    &lt;ul&gt;
+      &lt;li&gt;Partition scheme: &lt;code class=&quot;highlighter-rouge&quot;&gt;MBR&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Target system: &lt;code class=&quot;highlighter-rouge&quot;&gt;BIOS or UEFI&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;File system: &lt;code class=&quot;highlighter-rouge&quot;&gt;FAT32&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Click &lt;code class=&quot;highlighter-rouge&quot;&gt;START&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;When the process is done, eject the USB drive and insert it into the Surface.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;preparing-to-boot-from-usb&quot;&gt;Preparing to boot from USB&lt;/h3&gt;
+
+&lt;p&gt;To boot from USB, you need to first open the UEFI/BIOS on your Surface:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Power off the Surface Go.&lt;/li&gt;
+  &lt;li&gt;Keep &lt;code class=&quot;highlighter-rouge&quot;&gt;volume down&lt;/code&gt; button pressed.&lt;/li&gt;
+  &lt;li&gt;Press the &lt;code class=&quot;highlighter-rouge&quot;&gt;power&lt;/code&gt; button.&lt;/li&gt;
+  &lt;li&gt;Release &lt;code class=&quot;highlighter-rouge&quot;&gt;volume up&lt;/code&gt; when you see the Windows logo.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In the BIOS:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click on &lt;code class=&quot;highlighter-rouge&quot;&gt;Boot Configuration&lt;/code&gt; and move &lt;code class=&quot;highlighter-rouge&quot;&gt;USB Storage&lt;/code&gt; up the list.&lt;/li&gt;
+  &lt;li&gt;Click on &lt;code class=&quot;highlighter-rouge&quot;&gt;Security&lt;/code&gt; and set &lt;code class=&quot;highlighter-rouge&quot;&gt;Secure Boot&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;disabled&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Click on &lt;code class=&quot;highlighter-rouge&quot;&gt;Exit&lt;/code&gt;,&lt;/li&gt;
+  &lt;li&gt;Save the settings and reboot.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;booting-from-usb&quot;&gt;Booting from USB&lt;/h3&gt;
+
+&lt;p&gt;There should now be a blue screen with a warning about disk encryption.
+That’s because we’ve just disabled Secure Boot, and Windows has issues with that.
+There should be a button on the screen to skip/cancel this step. Click that.&lt;/p&gt;
+
+&lt;p&gt;You should now see/find the &lt;code class=&quot;highlighter-rouge&quot;&gt;Choose an option&lt;/code&gt; screen and then click &lt;code class=&quot;highlighter-rouge&quot;&gt;Use a device&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There you can choose the item named &lt;code class=&quot;highlighter-rouge&quot;&gt;Linpus&lt;/code&gt; boot option that should be visible.&lt;/p&gt;
+
+&lt;p&gt;If it isn’t visible, try the USB UEFI option.&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-mint&quot;&gt;Installing Mint&lt;/h3&gt;
+
+&lt;p&gt;Follow the wizard. I chose to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Not enable full disk encryption. (the extra password prompt doesn’t work well on tablet)&lt;/li&gt;
+  &lt;li&gt;To enable the LVM option.&lt;/li&gt;
+  &lt;li&gt;Encrypt my home folder.&lt;/li&gt;
+  &lt;li&gt;Put a password on my BIOS.&lt;/li&gt;
+  &lt;li&gt;To install the commercial (closed-source) software (For things like MP3 support, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mint-improvements&quot;&gt;Mint improvements&lt;/h3&gt;
+
+&lt;p&gt;The following steps presume that you have some knowledge of terminal usage like Bash.&lt;/p&gt;
+
+&lt;h4 id=&quot;fix-wifi&quot;&gt;Fix WiFi:&lt;/h4&gt;
+
+&lt;p&gt;The WiFi is now visible, but you can’t see any networks. I fixed it with this GitHub project:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Download the repo &lt;a href=&quot;https://github.com/jakeday/linux-surface&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo sh setup.sh&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I downloaded the repo to a USB drive and copied it onto the Surface.&lt;/p&gt;
+
+&lt;h4 id=&quot;fix-grub-30-second-delay&quot;&gt;Fix Grub 30 second delay:&lt;/h4&gt;
+
+&lt;p&gt;You’ll probably notice a black screen with some boot options for 30 seconds.
+If you’re suffering from this, do the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo sed -i &quot;/recordfail_broken=/{s/1/0/}&quot; /etc/grub.d/00_header&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo update-grub&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Reboot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://forums.linuxmint.com/viewtopic.php?t=287026&quot;&gt;source&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h4 id=&quot;firefox&quot;&gt;Firefox&lt;/h4&gt;
+
+&lt;p&gt;Firefox is the default browser, but the screen estate isn’t great for tablets.
+There are also issues with touch, but they are &lt;a href=&quot;https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox&quot;&gt;fixable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I found that Chromium was working much better out of the box.&lt;/p&gt;
+
+&lt;h4 id=&quot;hide-cursor-on-touch&quot;&gt;Hide cursor on touch&lt;/h4&gt;
+
+&lt;p&gt;One thing I noticed, is that wherever I touched the screen, the mouse cursor would teleport to that position
+on the screen. Windows 10 automatically hides the cursor, so I went searching online and found &lt;a href=&quot;https://github.com/nowrep/unclutter-xfixes&quot;&gt;a solution&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;This project didn’t compile for me, even with all the tools installed, so I had to disable the
+documentation part in the build process.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First install the build tools: &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt-get install build-essential ev libx11-dev libxi-dev&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Then download &lt;a href=&quot;https://github.com/nowrep/unclutter-xfixes&quot;&gt;unclutter-xfixes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;Makefile&lt;/code&gt;, and comment out the manual stuff (at &lt;code class=&quot;highlighter-rouge&quot;&gt;$(MANS)&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;install:&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.PHONY: install
+install: &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;TARGET&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; mans
+	&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;INSTALL&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; -Dm 0755 &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;TARGET&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;DESTDIR&lt;span class=&quot;k&quot;&gt;)$(&lt;/span&gt;BINDIR&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;TARGET&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#	$(INSTALL) -Dm 0644 man/unclutter-xfixes.1 &quot;$(DESTDIR)$(MANDIR)/unclutter.1&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#	$(INSTALL) -Dm 0644 -t &quot;$(DESTDIR)$(LICENSEDIR)/&quot; LICENSE&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;MANS&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;: %.1: %.man
+&lt;span class=&quot;c&quot;&gt;#	a2x --no-xmllint -f manpage &quot;$&amp;lt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;Skipped manual
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;make&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo make install&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Ensures it starts automatically:
+    &lt;ul&gt;
+      &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;System Settings&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Go to &lt;code class=&quot;highlighter-rouge&quot;&gt;Startup Applications&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;add new one with command “unclutter –touch”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;troubleshooting--notes&quot;&gt;Troubleshooting &amp;amp; Notes&lt;/h3&gt;
+
+&lt;h4 id=&quot;windows-10-recovery&quot;&gt;Windows 10 recovery&lt;/h4&gt;
+
+&lt;p&gt;If anything fails, you’ll need to reinstall Windows 10.
+Follow the &lt;a href=&quot;https://support.microsoft.com/en-us/surfacerecoveryimage&quot;&gt;official guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To boot the recovery drive:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ensure your UEFI/BIOS is still configured to allow booting from an (untrusted) USB device.&lt;/li&gt;
+  &lt;li&gt;Power off the Surface Go&lt;/li&gt;
+  &lt;li&gt;Keep &lt;code class=&quot;highlighter-rouge&quot;&gt;volume down&lt;/code&gt; button pressed&lt;/li&gt;
+  &lt;li&gt;Press the &lt;code class=&quot;highlighter-rouge&quot;&gt;power&lt;/code&gt; button&lt;/li&gt;
+  &lt;li&gt;Release &lt;code class=&quot;highlighter-rouge&quot;&gt;volume down&lt;/code&gt; when you see the Windows logo&lt;/li&gt;
+  &lt;li&gt;Install Windows 10&lt;/li&gt;
+  &lt;li&gt;Revert UEFI/BIOS to its original settings&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;display-scaling&quot;&gt;Display scaling&lt;/h4&gt;
+
+&lt;p&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;System Settings&lt;/code&gt; and:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;General&lt;/code&gt;, Configure &lt;code class=&quot;highlighter-rouge&quot;&gt;User interface scaling&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;Double (HiDPI)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;Login Window&lt;/code&gt;, its &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; tab, set &lt;code class=&quot;highlighter-rouge&quot;&gt;HiDPI support&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;Enable&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;on-screen-keyboard&quot;&gt;On-screen keyboard&lt;/h4&gt;
+
+&lt;p&gt;Mint has 2 variants: “Virtual Keyboard” and “Onboard”.&lt;/p&gt;
+
+&lt;p&gt;Onboard is the one that can be used on your lock screen through the accessibility option. It can also be used on the desktop.
+I advise to solely rely on the Onboard variant, as it is more reliable and has more options.&lt;/p&gt;
+
+&lt;p&gt;Virtual Keyboard is prettier (follows the Mint theme), but was buggy as it glitched out and broke my screen layouts until reboot.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-notes&quot;&gt;Final notes&lt;/h3&gt;
+
+&lt;p&gt;It was an interesting learning experience, and I was happy to have things running smoothly.
+I was pleasantly surprised that some of my favorite apps are now readily available through the package manager, including Sublime Text and Steam!&lt;/p&gt;
+
+&lt;p&gt;Sources and relevant articles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.slashgear.com/surface-go-with-linux-review-almost-the-perfect-open-source-notepad-25558990/&quot;&gt;Surface Go with Linux review&lt;/a&gt; on SlashGear&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/SurfaceLinux/comments/7kb1ky/guide_installing_linux_on_surfaceseries_devices/&quot;&gt;Installing Linux on Surface-Series Devices&lt;/a&gt; on Reddit&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/SurfaceLinux/comments/94hjxv/surface_go_first_impressions/&quot;&gt;Surface Go: First Impressions&lt;/a&gt; on Reddit&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This is a step-by-step guide describing the steps I took to install Mint 19.2 on a Surface Go device as the sole OS.</summary></entry><entry><title type="html">Introducing Spork 4.0.0</title><link href="/posts/2017/05/14/introducing-spork-4.0.0.html" rel="alternate" type="text/html" title="Introducing Spork 4.0.0" /><published>2017-05-14T17:11:00+02:00</published><updated>2017-05-14T17:11:00+02:00</updated><id>/posts/2017/05/14/introducing-spork%204.0.0</id><content type="html" xml:base="/posts/2017/05/14/introducing-spork-4.0.0.html">&lt;p&gt;I’ve been working hard on &lt;a href=&quot;http://spork.bytewelder.com&quot;&gt;Spork&lt;/a&gt; 4.0.0 since last summer.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
