@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-13T17:45:48+02:00</updated><id>/feed.xml</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
-</subtitle><entry><title type="html">Installing Linux Mint on a Surface Go</title><link href="/posts/2019/08/13/surface-go-linux-mint.html" rel="alternate" type="text/html" title="Installing Linux Mint on a Surface Go" /><published>2019-08-13T00:28:00+02:00</published><updated>2019-08-13T17:45:00+02:00</updated><id>/posts/2019/08/13/surface-go-linux-mint</id><content type="html" xml:base="/posts/2019/08/13/surface-go-linux-mint.html">&lt;p&gt;This is a step-by-step guide describing the steps I took to install Linux Mint 19.2 on a Surface Go device as the sole OS.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-13T17:57:32+02:00</updated><id>/feed.xml</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
+</subtitle><entry><title type="html">Installing Linux Mint on a Surface Go</title><link href="/posts/2019/08/13/surface-go-linux-mint.html" rel="alternate" type="text/html" title="Installing Linux Mint on a Surface Go" /><published>2019-08-13T00:28:00+02:00</published><updated>2019-08-13T17:57:00+02:00</updated><id>/posts/2019/08/13/surface-go-linux-mint</id><content type="html" xml:base="/posts/2019/08/13/surface-go-linux-mint.html">&lt;p&gt;This is a step-by-step guide describing the steps I took to install Linux Mint 19.2 on a Surface Go device as the sole OS.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -8,7 +8,7 @@ It was then that I realized the need to document the process, in case I ever nee
 
 &lt;p&gt;This document contains my notes, that I rewrote into this post.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/surface-go-with-linux-mint.jpg&quot; alt=&quot;Surface Go with Linux Mint&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/surface-go-with-linux-mint.jpg&quot; alt=&quot;Surface Go with Linux Mint&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Before you start, it’s important to know that Linux Mint isn’t perfect on the Surface Go. The cameras don’t work, as there are no drivers available. I also currently have a non-working hybernate/sleep mode. This did work in the first few hours, so I’ll
 investigate whether an apt-get update broke one of the applied fixes below.&lt;/p&gt;
@@ -16,7 +16,7 @@ investigate whether an apt-get update broke one of the applied fixes below.&lt;/
 &lt;p&gt;In return, though, you get increased battery life, and arguably a better user experience.
 You’ll also gain over &lt;code class=&quot;highlighter-rouge&quot;&gt;15 GB&lt;/code&gt; of disk space, and everything will feel more snappy.&lt;/p&gt;
 
-&lt;p&gt;This post was last updated at 2019-08-13 17:45:00 +0200.&lt;/p&gt;
+&lt;p&gt;This post was last updated at 2019-08-13 17:57:00 +0200.&lt;/p&gt;
 
 &lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;
 
