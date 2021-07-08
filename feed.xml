@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-07-08T22:37:39+02:00</updated><id>/feed.xml</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-07-08T23:08:09+02:00</updated><id>/feed.xml</id><title type="html">Byte Welder</title><subtitle>Learnings, experiments and projects.
 </subtitle><entry><title type="html">Google Analytics IP anonymization is a joke</title><link href="/posts/2021/07/08/google-analytics-ip-anonymization-is-a-joke.html" rel="alternate" type="text/html" title="Google Analytics IP anonymization is a joke" /><published>2021-07-08T22:30:00+02:00</published><updated>2021-07-08T22:30:00+02:00</updated><id>/posts/2021/07/08/google-analytics-ip-anonymization-is-a-joke</id><content type="html" xml:base="/posts/2021/07/08/google-analytics-ip-anonymization-is-a-joke.html">&lt;p&gt;Google Analytics, the popular data gathering and statistics analysis tool, has a feature called &lt;em&gt;IP Anonymization&lt;/em&gt; or &lt;em&gt;IP Masking&lt;/em&gt;.
 The name is kind of a joke to me, because it isn’t nearly as anonymous as it sounds. Let’s take a deeper look at this feature!&lt;/p&gt;
 
@@ -50,7 +50,7 @@ The name is kind of a joke to me, because it isn’t nearly as anonymous as it s
 
 &lt;p&gt;While technically, the anonymization technique of Google &lt;em&gt;does&lt;/em&gt; anonymize the IP address, it does so very poorly. Only partial anonymization is happening. Calling it that gives a false impression.&lt;/p&gt;
 
-&lt;p&gt;If someone would post your mobile phone number with only the last 2 digits removed in a public space, it would be easy for a caller to try all 99 numbers and see which one is the one where you pick up. Would you consider such a phone number &lt;em&gt;anonymous&lt;/em&gt;? I know I wouldn’t.&lt;/p&gt;
+&lt;p&gt;If someone would post your mobile phone number with only the last 2 digits removed in a public space, it would be easy for a caller to try all 100 numbers and see which one is the one where you pick up. Would you consider such a phone number &lt;em&gt;anonymous&lt;/em&gt;? I know I wouldn’t.&lt;/p&gt;
 
 &lt;h2 id=&quot;so-what-can-we-do-about-it&quot;&gt;So what can we do about it?&lt;/h2&gt;
 
