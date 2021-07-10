@@ -91,7 +91,7 @@ The name is kind of a joke to me, because it isn’t nearly as anonymous as it s
 
 <h2 id="so-how-does-google-store-your-ip">So how does Google store your IP?</h2>
 
-<p>When a computer is talking to Google Analytics and asks it to enable IP anonymization, something happens to it before Google stores it: the last part of that number series is removed - replaced by a <code class="highlighter-rouge">0</code>. If our IP would be<code class="highlighter-rouge">101.102.103.104</code>, then it would look like this after Google’s anonymization process: <code class="highlighter-rouge">101.102.103.0</code></p>
+<p>When a computer is talking to Google Analytics and asks it to enable IP anonymization, something happens to it before Google stores it: the last part of that number series is removed - replaced by a <code class="highlighter-rouge">0</code>. If your IP would be <code class="highlighter-rouge">101.102.103.104</code>, then it would look like this after Google’s anonymization process: <code class="highlighter-rouge">101.102.103.0</code></p>
 
 <p>The removed number is always in the range of <code class="highlighter-rouge">[0 - 255]</code>. This means that Google is only <code class="highlighter-rouge">256</code> guesses away from recovering your “anonymized” IP address! “Why is this a problem?” you might ask:</p>
 
